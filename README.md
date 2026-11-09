@@ -13,6 +13,10 @@ A framework-free UI component library, built as native
 31 custom elements, each shipped as plain JavaScript with a matching usage
 guide. See "What's built" below for the full list and tag names.
 
+Written for Phillip's teams and for the AI coding agents they build
+screens with; both read the same rules. `CLAUDE.md` and `AGENTS.md` carry
+the short form for agents.
+
 ## Non-negotiables
 
 Five rules that hold on every screen, before anything else in this file.
@@ -366,9 +370,12 @@ everything here is checked-in source.
 MIT terms with one condition added: the library may be used only to
 design, prototype, build or test user interfaces for Phillip Securities
 products and services, and the brand assets only unaltered on those
-interfaces. That makes it free for anyone working on those products,
-inside or outside the company, and not a general-purpose UI kit. It is not
-an OSI-approved open source licence. Full text in `LICENSE.md`.
+interfaces. That covers Phillip's own teams (design, product, business
+analysts, developers), vendors and contractors working on those products,
+and the AI coding agents any of them use: an agent may read, copy and
+build on the library to produce screens for those products, on the same
+terms as the person it works for. It is not a general-purpose UI kit, and
+it is not an OSI-approved open source licence. Full text in `LICENSE.md`.
 
 ## You've read this far 🥹
 
