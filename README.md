@@ -13,6 +13,33 @@ A framework-free UI component library, built as native
 31 custom elements, each shipped as plain JavaScript with a matching usage
 guide. See "What's built" below for the full list and tag names.
 
+## Non-negotiables
+
+Five rules that hold on every screen, before anything else in this file.
+A screen that breaks one is not finished, whatever else it gets right.
+
+1. **One screen per preview.** Each `<pds-preview>` holds exactly one
+   screen. A flow is several previews side by side, never one long scroll.
+2. **Two surfaces.** The screen is `--pds-surface-1`; a container on it is
+   `--pds-surface-2`; that is the whole stack. Nothing on surface-2 gets a
+   fill of its own. Rows separate with dividers or spacing, never with a
+   third grey.
+3. **A card never holds a card.** Containers (card, sheet, dialog) are
+   placed by the screen, never inside each other. Rows and lists inside a
+   card take the card's surface. Sub-items indent under their parent row;
+   they never get a box of their own.
+4. **Right chevron navigates, down chevron discloses.** `chevron_right`
+   at the end of a row means tapping it opens another screen.
+   `chevron_down`, then `chevron_up` while open, means the row expands in
+   place. A row does one or the other, and a screen never gives one icon
+   both meanings.
+5. **Money is code, space, two decimals.** `SGD 10,000.00`, `USD 0.00`.
+   Never `$` or `S$`, never the code after the figure, never a bare amount.
+   A price carries no code and the market's tick decimals (`3.960` on
+   SGX); the code is stated once, in the label or the field suffix. A
+   quantity is whole, with thousands separators. A percentage has two
+   decimals and its sign, in brackets after the figure it qualifies.
+
 ## What a screen built with this is, and is not
 
 A screen built with this library is a high-fidelity concept: it shows an
@@ -103,8 +130,9 @@ These come from the design system's component documentation and apply
 to every screen, whatever the component.
 
 1. **A financial value never truncates, rounds or breaks mid-number**,
-   and carries its currency code. A name or a title may truncate as a
-   last resort; a value never does. The column grows or scrolls instead.
+   and carries its currency code in the form of non-negotiable 5
+   (`SGD 10,000.00`). A name or a title may truncate as a last resort; a
+   value never does. The column grows or scrolls instead.
 2. **A money action never reads OK, Yes or Submit.** The label restates
    the action: "Place order", "Cancel order" / "Keep order". The amount
    shown is the amount that gets sent.

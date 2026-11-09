@@ -27,6 +27,9 @@ list; use a list row instead.
 
 - Never mix a whole-card tap target with other tappable rows inside it
   unless the pressed states are visually distinct.
+- Never put a card inside a card, or a card inside a list row. Containers
+  are placed by the screen, never by each other; sub-items indent under
+  their parent row (README non-negotiable 3).
 
 ## Rules from the design system documentation
 

@@ -226,7 +226,7 @@
       <footer class="total">
         <div class="gross">
           <span class="label" data-zh="总额" data-ja="総額">Gross value</span>
-          <span class="num" id="gross">SGD 0</span>
+          <span class="num" id="gross">SGD 0.00</span>
         </div>
         <pds-button block id="review" tone="positive"><span data-zh="查看买入订单" data-ja="買い注文を確認">Review buy order</span></pds-button>
       </footer>
@@ -271,7 +271,7 @@
       <footer class="total">
         <div class="gross">
           <span class="label" data-zh="总额" data-ja="総額">Gross value</span>
-          <span class="num" id="s-gross">SGD 0</span>
+          <span class="num" id="s-gross">SGD 0.00</span>
         </div>
         <pds-button block id="confirm" tone="positive"><span data-zh="确认买入订单" data-ja="買い注文を確定">Confirm buy order</span></pds-button>
       </footer>
@@ -279,7 +279,7 @@
 
     <pds-dialog id="range-dialog">
       <span slot="title" id="range-title" data-zh="买价超出允许范围" data-ja="買値が許容範囲外">Buy price outside allowed range</span>
-      <p data-zh="您的价格超出允许范围 $2.57 至 $5.34。" data-ja="価格が許容範囲（$2.57〜$5.34）外です。">Your price is outside the allowed range of $2.57 to $5.34.</p>
+      <p data-zh="您的价格超出允许范围 2.570 至 5.340。" data-ja="価格が許容範囲（2.570〜5.340）外です。">Your price is outside the allowed range of 2.570 to 5.340.</p>
       <p data-zh="联系交易代表（TR）提交此订单。" data-ja="取引担当者（TR）に連絡して注文してください。">Contact your Trading Representative (TR) to submit this order.</p>
       <pds-button slot="actions" id="range-ok"><span data-zh="好的" data-ja="OK">Okay</span></pds-button>
     </pds-dialog>
@@ -320,10 +320,8 @@
 
     const price = $("price"), qty = $("qty");
     const num = (field) => parseFloat(String(field.value).replace(/,/g, "")) || 0;
-    const money = (n) => {
-      const v = Math.round(n * 100) / 100;
-      return "SGD " + (v % 1 === 0 ? v.toLocaleString("en-SG", { maximumFractionDigits: 0 }) : v.toLocaleString("en-SG", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-    };
+    // Money is code, space, two decimals (README non-negotiable 5).
+    const money = (n) => "SGD " + n.toLocaleString("en-SG", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const update = () => {
       $("gross").textContent = money(num(price) * Math.round(num(qty)));
       if (Math.round(num(qty)) >= 100) clearAttr(qty, "error");
