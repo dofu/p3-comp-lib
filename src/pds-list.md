@@ -14,8 +14,8 @@ in a list; use `pds-list-row` instead.
   </pds-list-row>
   <pds-list-row lines="2">
     Apple Inc.
-    <span slot="secondary">AAPL</span>
-    <span slot="trailing">$113.11</span>
+    <span slot="secondary">AAPL · USD</span>
+    <span slot="trailing">113.11</span>
   </pds-list-row>
 </pds-list>
 ```
@@ -29,6 +29,9 @@ in a list; use `pds-list-row` instead.
 ## Don't
 
 - Never truncate a financial value; let names truncate instead if space is tight.
+- Never end a row with `chevron_right` unless tapping it opens another
+  screen. A row that expands in place ends with `chevron_down`, then
+  `chevron_up` while open (README non-negotiable 4).
 
 ## Rules from the design system documentation
 

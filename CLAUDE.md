@@ -4,7 +4,22 @@ This folder is the P3 component library: `pds-*` web components, plain
 JavaScript, no build step. When you build or change any screen in a
 project that includes this library, these rules apply.
 
-1. Read `README.md`, section "Rules for every screen", and follow it.
+Non-negotiables, before anything else (README section "Non-negotiables"):
+
+- One screen per `<pds-preview>`; a flow is several previews.
+- Two surfaces: the screen is `--pds-surface-1`, a container on it is
+  `--pds-surface-2`, and nothing on surface-2 has a fill of its own.
+- A card never holds a card. Containers are placed by the screen, never
+  inside each other; sub-items indent under their parent row.
+- `chevron_right` ends a row that opens another screen; `chevron_down`
+  and `chevron_up` a row that expands in place. Never both meanings on
+  one icon.
+- Money is `SGD 10,000.00`: code, one space, two decimals. Never `$`,
+  never the code after, never bare. Prices carry no code and the
+  market's tick decimals; quantities are whole.
+
+1. Read `README.md`, sections "Non-negotiables" and "Rules for every
+   screen", and follow them.
 2. Build from this library only. Never write your own button, input, tab,
    chip, switch, list, dialog or navigation, never style a raw `<button>`
    or `<input>` to look like one, and never copy from another UI kit or
