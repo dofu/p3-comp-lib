@@ -333,6 +333,15 @@ This folder is self-contained; push it as the root of its own repository,
 or as a subfolder of an existing one. No `node_modules`, no build output:
 everything here is checked-in source.
 
+## License
+
+MIT terms with one condition added: the library may be used only to
+design, prototype, build or test user interfaces for Phillip Securities
+products and services, and the brand assets only unaltered on those
+interfaces. That makes it free for anyone working on those products,
+inside or outside the company, and not a general-purpose UI kit. It is not
+an OSI-approved open source licence. Full text in `LICENSE.md`.
+
 ## You've read this far 🥹
 
 Why does every preview come with a Dark toggle? Because light attracts
