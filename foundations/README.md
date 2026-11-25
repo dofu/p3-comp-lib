@@ -31,9 +31,11 @@ the V2 Typeface styles designers apply today, read from the design file.
 Rules:
 
 - Hand-built text takes one of these classes, or the matching tokens in
-  your CSS. Never a size outside the scale, and never a size below 11 px.
-- Body copy is Body Medium (14) or Body Large (16). Label Small (11) is
-  for badges only; Label Medium (12) for the bottom bar and captions.
+  your CSS. Never a size outside the scale, and never a size below 14 px
+  on a screen: Body Small (12), Label Medium (12) and Label Small (11)
+  are not for screen text.
+- Body copy is Body Large (16). Body Medium and Label Large (14) are the
+  smallest sizes for secondary text, labels and table headers.
 - Screen titles are Title Large (22); a figure that leads a screen
   (a net asset value) is Headline Small (24) or larger.
 - Financial values use tabular figures: `font-variant-numeric: tabular-nums`.

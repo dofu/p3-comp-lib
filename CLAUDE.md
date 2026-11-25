@@ -15,8 +15,9 @@ Non-negotiables, before anything else (README section "Non-negotiables"):
   and `chevron_up` a row that expands in place. Never both meanings on
   one icon.
 - Money is `SGD 10,000.00`: code, one space, two decimals. Never `$`,
-  never the code after, never bare. Prices carry no code and the
-  market's tick decimals; quantities are whole.
+  never bare, never two code positions on one screen. Prices carry no
+  code and the market's tick decimals; quantities keep their real
+  precision with no trailing zeros.
 
 1. Read `README.md`, sections "Non-negotiables" and "Rules for every
    screen", and follow them.

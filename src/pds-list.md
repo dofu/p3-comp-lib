@@ -28,7 +28,9 @@ in a list; use `pds-list-row` instead.
 
 ## Don't
 
-- Never truncate a financial value; let names truncate instead if space is tight.
+- Never truncate a financial value. A name may end in an ellipsis only
+  after three lines, and only where the row opens a page that shows it
+  in full.
 - Never end a row with `chevron_right` unless tapping it opens another
   screen. A row that expands in place ends with `chevron_down`, then
   `chevron_up` while open (README non-negotiable 4).

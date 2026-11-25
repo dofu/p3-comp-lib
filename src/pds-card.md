@@ -36,7 +36,8 @@ list; use a list row instead.
 - Five patterns only; extend a slot before inventing a new card.
 - No shadows on dark surfaces. A tonal raise or a hairline instead.
 - A title clamps at two lines with an ellipsis, the only text allowed to
-  truncate. A value never truncates: the full value with currency and
+  truncate. In a sideways-scrolling row of cards the title takes three
+  lines, and every card in the row has the height of the tallest. A value never truncates: the full value with currency and
   tabular figures.
 - A post body clamps at three lines with a "more" affordance. A meta row
   is one line of facts: time, validity, points.
