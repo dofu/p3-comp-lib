@@ -31,8 +31,8 @@ of a screen (tabs).
   off when it sits beside a label.
 - Buy and price-up choices take `tone="positive"`, Sell and price-down
   take `tone="negative"`; the rest stay orange.
-- Keep labels to one or two words. A label never wraps or truncates; at a
-  larger text size the control grows taller instead.
+- Keep labels to one or two words. A label never wraps or truncates, and
+  it does not grow with the text size. The control stays on one row.
 
 ## Don't
 

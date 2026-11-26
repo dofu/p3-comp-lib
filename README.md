@@ -38,10 +38,13 @@ A screen that breaks one is not finished, whatever else it gets right.
    place. A row does one or the other, and a screen never gives one icon
    both meanings.
 5. **Money is code, space, two decimals.** `SGD 10,000.00`, `USD 0.00`.
-   Never `$` or `S$`, never the code after the figure, never a bare amount.
+   Never `$` or `S$`, never a bare amount. Code before the figure is the
+   library's form; whether the app puts it before or after is still being
+   decided, so do not mix the two on one screen.
    A price carries no code and the market's tick decimals (`3.960` on
    SGX); the code is stated once, in the label or the field suffix. A
-   quantity is whole, with thousands separators. A percentage has two
+   quantity keeps its real precision with no trailing zeros
+   (`1,000`, `0.4`), with thousands separators. A percentage has two
    decimals and its sign, in brackets after the figure it qualifies.
 
 ## What a screen built with this is, and is not
@@ -144,9 +147,11 @@ to every screen, whatever the component.
    (`pds-segmented-button`) or a radio group. Several at once: chips or checkboxes. Takes effect the moment it
    is tapped: a switch. A chip is never a button, and a switch never sits
    behind Apply.
-4. **Text scaling.** The app offers Regular, Large and Extra Large text
-   (100, 115 and 130 %). At every size a label fits, then grows, then
-   wraps, then a pair stacks. Nothing shrinks and nothing truncates.
+4. **Text scaling.** The app offers two text sizes, 100 % and 130 %.
+   At both sizes a label fits, then grows, then wraps, then a pair
+   stacks. Nothing shrinks. Values never truncate; a name in a table or
+   list column may end in an ellipsis after three lines, and shows in
+   full on the page it opens.
 5. **Confirmations and feedback.** A decision that blocks is a dialog
    with a specific headline ("Cancel this order?"). A finished background
    action is a snackbar that says what happened. A sheet with a Cancel
@@ -168,8 +173,8 @@ apply to it alone.
 text takes a type class (`pds-type-body-medium`, `pds-type-title-large`,
 `pds-type-headline-small` and so on), hand-built layout takes
 `--pds-space-*` for every gap and `--pds-radius-*` for every corner.
-Never a size, gap or radius off the scale; the smallest text is 11 px
-and body copy is 14 or 16 px. The scales and the rules are in
+Never a size, gap or radius off the scale; the smallest text on a
+screen is 14 px and body copy is 16 px (Body Large). The scales and the rules are in
 `foundations/README.md`.
 
 ## Report a problem
